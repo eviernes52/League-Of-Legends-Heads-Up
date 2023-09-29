@@ -41,17 +41,19 @@ h4{
 .card-content{
 background-color: rgba(6, 0, 25, 0.569);
 height: 250px;
-width: 450px;
+width: 600px;
+border: 0.1rem solid gold;
+border-color: gold;
 }
 
 .card-container h3{
   color: rgb(205, 243, 127);
-  padding: 28%;
+  padding: 15%;
 }
 
 .card-container p{
   color: rgb(205, 243, 127);
-  padding: 10%;
+  padding: 5%;
 }
 
 button{
