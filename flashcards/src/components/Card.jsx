@@ -19,21 +19,28 @@ function Card({ leagueChampions }) {
     setShowHint(!showHint);
   };
 
+  const handleCardClick = () => {
+    // Toggle the card when it's clicked
+    handleFlip();
+  };
+
   return (
     <div className="card-container">
-      <div className={`card ${showHint ? '' : 'flipped'}`}>
+      <div className={`card ${showHint ? '' : 'flipped'}`} onClick={handleCardClick}>
         <div className="card-content">
-          {showHint ? (
-            <div>
-              <p>Hint: {currentChampion.hint}</p>
-              <p>Difficulty: {currentChampion.difficulty}</p>
-            </div>
-          ) : (
-            <div>
-              <h3>Champion: {currentChampion.champion}</h3>
-              {/* <img src={currentChampion} alt={currentChampion.champion} /> */}
-            </div>
-          )}
+          <div onClick={handleCardClick}> {/* Add this div for clicking */}
+            {showHint ? (
+              <div>
+                <p>Hint: {currentChampion.hint}</p>
+                <p>Difficulty: {currentChampion.difficulty}</p>
+              </div>
+            ) : (
+              <div>
+                <h3>Champion: {currentChampion.champion}</h3>
+                {/* <img src={currentChampion} alt={currentChampion.champion} /> */}
+              </div>
+            )}
+          </div>
         </div>
       </div>
       <div className="card-buttons">
