@@ -28,7 +28,7 @@ function Card({ leagueChampions }) {
     <div className="card-container">
       <div className={`card ${showHint ? '' : 'flipped'}`} onClick={handleCardClick}>
         <div className="card-content">
-          <div onClick={handleCardClick}> {/* Add this div for clicking */}
+          <div onClick={handleCardClick}> 
             {showHint ? (
               <div>
                 <p>Hint: {currentChampion.hint}</p>

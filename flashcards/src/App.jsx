@@ -19,10 +19,9 @@ function App() {
   return (
     <div className="App">
       <div className='container'>
-        <h2>League Champion Heads Up</h2>
+        <h2>League Of Legends Champion Heads Up</h2>
         <h3>How much league have you played? Guess the champion based on the information given</h3>
         <h4>Number of Total Cards: {leagueChampions.length}</h4>
-        {/* Pass the data as a prop named "leagueChampions" */}
         <Card leagueChampions={leagueChampions} />
       </div>
     </div>
