@@ -7,7 +7,11 @@ function Card({ leagueChampions }) {
   const currentChampion = leagueChampions[currentCardIndex];
 
   const handleNext = () => {
-    setCurrentCardIndex((currentCardIndex + 1) % leagueChampions.length);
+    let randomIndex = currentCardIndex;
+    while (randomIndex === currentCardIndex) {
+      randomIndex = Math.floor(Math.random() * leagueChampions.length);
+    }
+    setCurrentCardIndex(randomIndex);
     setShowHint(true);
   };
 
